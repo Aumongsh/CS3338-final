@@ -1,0 +1,75 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\geometry{margin=1in}
+
+\title{\textbf{Design Specification Document}}
+\date{} 
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+
+\section{Website Breakdown}
+
+\subsection{Homepage}
+\begin{itemize}
+    \item Input fields for two Youtube channel URLs.
+    \item Select number of videos and filter method.
+    \item 'Compare' button to start backend process.
+\end{itemize}
+
+\subsection{Results Page}
+\begin{itemize}
+    \item Shows shared commenter count.
+    \item Stats & Visualization.
+\end{itemize}
+
+
+\section{Functionalities}
+
+\subsection{Frontend}
+\begin{itemize}
+    \item Styling, UI
+    \item Results display
+\end{itemize}
+
+\subsection{Backend}
+\begin{itemize}
+    \item Validate channel input
+    \item Grab videos and comments via YouTube API
+    \item Save data into database
+    \item Calculate number of shared commenters
+    \item Return results to frontend
+\end{itemize}
+
+\section{Tool Breakdown}
+
+\subsection{Frontend}
+\begin{itemize}
+    \item React
+    \item Tailwind CSS (style)
+    \item Recharts (charts)
+\end{itemize}
+
+\subsection{Backend}
+\begin{itemize}
+    \item Node.js (Runtime)
+    \item Fastify (Framework)
+    \item Axios (API)
+    \item PostgreSQL (Database)
+    \item dotenv (Environment Variables)
+\end{itemize}
+
+\newpage
+\section{Changelog}
+\begin{itemize}
+    \item v1 - Base Design Spec covering major functionalities and tools
+\end{itemize}
+\end{document}
