@@ -1,0 +1,147 @@
+
+\documentclass[12pt]{article}
+
+% packages
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\pagestyle{fancy}
+\fancyhead[L]{Software Design Document}
+\fancyfoot[C]{\thepage}
+
+\title{Software Design Document}
+\author{Group 6}
+\date{Version 4.0}
+
+\begin{document}
+
+% title page
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\Huge \bfseries Software Design Document \par}
+    {\huge Version 4.0 \par}
+    \vspace{1cm}
+    {\Large Group 6 \par}
+    {Momoka Aung \par}
+    {Alexander Jacobo \par}
+    {Tae Ha Kim \par}
+    {Kadence Tang \par}
+\end{titlepage}
+
+% table of contents
+\tableofcontents
+\newpage
+
+% version history
+\section{Version History}
+\begin{tabularx}{\textwidth}{|c|c|c|X|}
+    \hline
+    \textbf {Editor} & \textbf{Version} & \textbf{Date} & \textbf{Description} \\
+    \hline
+    Group 6 & 1.0 & 4 Dec 2025 & Checkpoint 1: First draft of document. Basic information added for Lab Activity. \\
+    \hline
+    Kadence Tang & 2.0.0 & 5 Dec 2025 & Checkpoint 2: Updated user interface information. \\
+    \hline
+    Kadence Tang & 3.0.0 & 7 Dec 2025 & Checkpoint 3: Cleaned up formatting. \\
+    \hline
+    Kadence Tang & 4.0.0 & 9 Dec 2025 & Final Draft. \\
+    \hline 
+\end{tabularx}
+\newpage
+
+% sections
+\section{Introduction}
+    \subsection{Purpose}
+    This Software Design Document serves as a blueprint for the Influencer Analysis Tool (IAT).
+    
+    \subsection{Intended Audience}
+    This Software Design Document provides useful information to the following audience:
+    \begin{itemize}
+        \item \textbf{YouTube Content Creator Managers}
+        \item \textbf{YouTube Content Creators}
+    \end{itemize}
+    
+    \subsection{Overview}
+    The Influencer Analysis Tool (IAT) is a web-based application designed to help YouTube content creators and managers analyze audience overlap between channels. By scraping usernames from comment sections of videos, the tool compares recurring viewers between two channels and calculates the percentage of overlap. The tool allows content creators to better understand the type of content their audience wants to see.
+    
+\section{System Architecture}
+    \subsection{System Purpose and Goals}
+    The Influencer Analysis Tool is designed to provide insight into audience overlap between YouTube channels. It functions as a data-driven platform to support content creators in understanding their reach and shared audiences. The tool does the following:
+    \begin{itemize}
+        \item \textbf{Audience Overlap Analysis:} Enable creators to identify shared viewers between channels.
+        \item \textbf{ata Collection and Aggregation:} Collect and aggregate usernames to build a dataset for analysis.
+    \end{itemize}
+    
+    \subsection{System Functionality Breakdown}
+    The IAT system can be viewed as a website-driven project offering the following core functionalities:
+    \begin{itemize}
+        \item \textbf{Secure User Access:} Controls and regulates access to the website through a login and security system, ensuring authorized user participation.
+        \item \textbf{User Interface Management:} Provides access to various UI pages, allowing users to input identifiers, initiate scraping, and view results.
+        \item \textbf{Data Communication and Management:} Manages data transfer (channel identifiers, usernames, overlap statistics) within a secure environment.
+        \item \textbf{Scraper Workflow:} Provides functionalities for scraping usernames from comment sections of specified channels.
+        \item \textbf{Comparison Workflow:} Provides functionalities for comparing usernames and calculating overlap statistics.
+        \item \textbf{Administrator Workflow:} Provides functionalities for administrators to manage data storage, oversee scraping processes, and ensure system integrity.
+        \item \textbf{Essential Utilities:} Supports utilities such as data storage, user management, and communication functionalities.
+    \end{itemize}
+
+    \subsection{Workflow}
+    \begin{enumerate}
+        \item The user enters their own YouTube channel identifier.
+        \item The user specifies a target YouTube creator.
+        \item The tool scrapes comment sections from both creator’s videos.
+        \item The collected usernames are compared and checked for overlap.
+        \item The system calculates overlap frequency and percentage.
+        \item The results are presented in structured format.
+    \end{enumerate}
+    
+    \subsection{Component Breakdown}
+    \begin{itemize}
+        \item \textbf{Input Channel Module:} User inputs their own channel identifier and a target channel identifier.
+        \item \textbf{Scraper Engine:} Collects usernames from the comment sections of videos from both channels.
+        \item \textbf{Comparison Engine:} Compares collected usernames; counts how many usernames appear under both channels and calculates the percentage of overlap.
+        \item \textbf{Results Module:} Displays the number of overlapping viewers and the percentage of viewers that overlap between the two input channels.
+        \item \textbf{Database:} Stores channel identifiers, scraped usernames, recurring viewer records, and overlap statistics.
+    \end{itemize}
+
+\section{User Interface}
+    \subsection{UI Overview}
+    The Influencer Analysis Tool (IAT) offers a simple interface for analyzing audience overlap. Users start by creating an account with a secure password to protect their data. The dashboard provides tutorials, tool information, and feedback, with optional logins through Google or GitHub. The analysis page lets users scrape and compare viewer data, then view results in clear charts. The IAT is meant to help creators understand shared audiences while keeping data safe and easy to use.
+
+    \subsection{Database Design}
+    The application database stores the following:
+    \begin{itemize}
+        \item Channel identifiers
+        \item Scraped usernames
+        \item Recurring viewer records
+        \item Overlap statistics
+    \end{itemize}
+
+% glossary
+\section{Glossary}
+\begin{tabularx}{\textwidth}{|l|X|}
+    \hline
+    \textbf{Term} & \textbf{Definition} \\
+    \hline
+    IAT & Influencer Analysis Tool \\
+    \hline
+    API & Application Programming Interface \\
+    \hline
+\end{tabularx}
+
+% references
+\begin{thebibliography}{9}
+    \bibitem{ytAPI} “YouTube API Services Terms of Service  |  Google for Developers.” Google, Google, developers.google.com/youtube/terms/api-services-terms-of-service. Accessed 4 Dec. 2025. 
+    % this is a placeholder reference.
+\end{thebibliography}
+
+\end{document}
