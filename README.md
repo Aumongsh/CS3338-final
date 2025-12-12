@@ -1,7 +1,7 @@
 # CS3338-final Group 6: Youtube Audience Analyzer
 Disclaimer: README is split into the .md file on the frontpage of the repo and a separate User Manual found within docs. Jira link, along with other sections, will be included in the User Manual.
 
-# Jira Link
+## Jira Link
 https://calstatela-team-y6yik1r0.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiZjg2MDkyZDYwZWY2NDk1MDgwYmIwZDBlMDI1NDYzMzgiLCJwIjoiaiJ9
 
 ## Important Message for Professor
