@@ -1,1 +1,55 @@
 
+TESTRAIL DOCUMENTATION
+YouTube Audience Analyzer
+Manual TestRail Report (Snapshots 2, 3, 4, Final)
+1. Introduction
+This document serves as a full TestRail replacement for the YouTube Audience Analyzer project.
+Due to TestRail access issues, all the test cases and snapshot test runs were manually recreated.
+2. TestRail Access Explanation
+The TestRail account became unaccesable and could not be used at all. Instructor advised us to manually create the
+TestRail cases.
+3. Project Information
+Project Name: YouTube Audience Analyzer – Test Suite
+Test Suite: Core Functionality Test Suite
+4. Test Cases
+TC-01 — Invalid Channel URL Validation
+Preconditions:- App running, home page loaded.
+Test Data:- https://google.com- abcd1234
+Steps:
+1. Enter invalid URL.
+2. Click Compare.
+Expected:- “Invalid URL” shown. No redirection.
+TC-02 — Valid Channel URL Validation and Redirect
+Steps:
+1. Enter two valid URLs.
+2. Select category.
+3. Enter video count.
+4. Click Compare.
+Expected:- URLs accepted, results page loads.
+TC-03 — Video Amount Selection
+Steps:
+1. Enter two valid URLs.
+2. Set number of videos (e.g., 5).
+3. Compare.
+Expected:- Exactly 5 videos per channel.
+TC-04 — Comparison Category Selection
+Steps:
+1. Select Most Viewed; load results.
+2. Select Most Recent; load results.
+Expected:- Dataset changes based on category.
+TC-05 — Result Statistics Display
+Steps:
+1. Load results.
+2. Observe charts/tables/summary.
+Expected:- All values correct and consistent.
+TC-06 — Result Sorting Options
+Steps:
+1. Test sorting: Most Viewed, Most Recent, Shared Commenters.
+Expected:- Order updates correctly each time.
+5. Snapshot Test Runs
+Snapshot 2:- First full execution; focus on URL validation and basic display.
+Snapshot 3:- Backend improvements; revalidated all core features.
+Snapshot 4:- UI/chart/sorting improvements validated.
+Final Test Execution Run:- Final pass ensuring all major functionality works end-to-end.
+6. Conclusion
+This document fully replaces TestRail and satisfies project testing requirements.
