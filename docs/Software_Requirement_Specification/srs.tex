@@ -8,9 +8,7 @@
 \usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{lipsum}
-\usepackage{geometry}
 \usepackage{caption}
-\usepackage{graphicx}
 \usepackage{enumitem}
 
 \pagestyle{fancy}
@@ -30,11 +28,7 @@
     {\Huge \bfseries Software Requirement Specification \par}
     {\huge Version 4.0 \par}
     \vspace{1cm}
-    {\large Group 6 \par}
-    {Momoka Aung \par}
-    {Alexander Jacobo \par}
-    {Tae Ha Kim \par}
-    {Kadence Tang \par}
+    {\large Momoka Aung \\ Alexander Jacobo \\ Tae Ha Kim \\ Kadence Tang \par}
 \end{titlepage}
 
 % table of contents
@@ -47,13 +41,13 @@
     \hline
     \textbf {Editor} & \textbf{Version} & \textbf{Date} & \textbf{Description} \\
     \hline
-    Group 6 & 1.0.0 & 4 Dec 2025 & Checkpoint 1: First draft of document. Basic information added for Lab Activity. \\
+    Group 6 & 1.0 & 4 Dec 2025 & Checkpoint 1: First draft of document. Basic information added for Lab Activity. \\
     \hline
-    Kadence Tang & 2.0.0 & 5 Dec 2025 & Checkpoint 2: Added helpful information and more details. \\
+    Kadence Tang & 2.0 & 5 Dec 2025 & Checkpoint 2: Added helpful information and more details. \\
     \hline
-    Kadence Tang & 3.0.0 & 7 Dec 2025 & Checkpoint 3:  Fixed wording, rewrote Legal and Ethical Considerations section. \\
+    Kadence Tang & 3.0 & 7 Dec 2025 & Checkpoint 3:  Fixed wording, rewrote Legal and Ethical Considerations section. \\
     \hline
-    Kadence Tang & 4.0.0 & 9 Dec 2025 & Final Draft. \\
+    Kadence Tang & 4.0 & 9 Dec 2025 & Final Draft. \\
     \hline 
 \end{tabularx}
 
@@ -92,23 +86,31 @@
         
 \section{External Interface Requirements}
     \subsection{User Interface}
-    The interface is a simple web form to input channel identifiers. Results are displayed as text, showing the number of overlapping viewers and the percentage of shared viewers. A dashboard view may include tutorials, usage instructions, and feedback options.
+    The user interface consists of a homepage with input fields for two YouTube channel URLs, options to select the number of videos and filter method, and a 'Compare' button to initiate analysis. The results page displays overlap statistics, including shared commenter counts, percentages visualized in charts, and sortable tables for detailed exploration. A dashboard view may also include tutorials, usage instructions, and feedback options.
 
     \subsection{Hardware Interfaces}
-    Users will need a mobile device or personal computer. On desktop, a keyboard and mouse or trackpad are required. On mobile, touchscreen input will be supported.
+    Users will need a mobile device or personal computer with an active internet connection. On desktop, a keyboard and mouse or trackpad are required. On mobile, touchscreen input will be supported.
     
     \subsection{Software Interfaces}
-    The tool communicates with YouTube APIs to scrape public comment data. It will be built using:
-   \begin{itemize}
-        \item \textbf{Frontend: React 18.2.0} – Provides the user interface framework for building interactive web pages and forms.
-        \item \textbf{Backend: Node.js 20.17.0 LTS with Fastify} – Handles server-side logic, routing, and efficient request/response management.
-        \item \textbf{YouTube API via Axios} – Axios is used as the HTTP client to communicate with the YouTube Data API, enabling scraping of public comment data.
-        \item \textbf{Database: PostgreSQL 18} – Stores channel identifiers, scraped usernames, recurring viewer records, and overlap statistics.
-        \item \textbf{JavaScript} – Core programming languages used across both frontend and backend for consistent development.
+    The tool communicates with YouTube APIs and uses the following technologies:
+    \begin{itemize}
+        \item \textbf{Frontend: React, Tailwind CSS, Recharts} – Provides the user interface, styling, and chart visualization.
+        \item \textbf{Backend: Node.js with Fastify} – Handles server-side logic, routing, and request/response management.
+        \item \textbf{HTTP Client: Axios} – Communicates with the YouTube Data API to retrieve public comment data.
+        \item \textbf{Database: PostgreSQL} – Stores channel identifiers, scraped usernames, recurring viewer records, and overlap statistics.
+        \item \textbf{Environment Management: dotenv} – Manages environment variables securely, including API keys and database credentials.
+        \item \textbf{Programming Languages: JavaScript/TypeScript} – Used across frontend and backend for consistent development.
+    \end{itemize}
+
+    \subsection{Deployment Environment}
+    \begin{itemize}
+        \item \textbf{Frontend Hosting: Vercel} – Provides serverless deployment and scaling for the React-based frontend.
+        \item \textbf{Backend Hosting: Railway} – Hosts the Node.js/Fastify backend with PostgreSQL integration.
+        \item \textbf{Security:} All deployments enforce HTTPS connections and environment variables are managed via dotenv.
     \end{itemize}
 
     \subsection{Communications Interfaces}
-    Users may contact the development team via email for support or bug reports. The application will also provide optional notifications or reports via email.
+    The frontend and backend communicate via RESTful API endpoints over HTTPS to ensure secure data transfer. Users may contact the development team via email for support or bug reports. The application may also provide optional notifications or reports via email.
 
 \section{Legal and Ethical Considerations}
     The IAT operates exclusively on public information, specifically usernames that appear in the comment sections of YouTube videos. No other account identifiers or personal data are collected, stored, or used in the analysis.
@@ -157,9 +159,7 @@
 
 % references
 \begin{thebibliography}{9}
-    \bibitem{ytAPI} “YouTube API Services Terms of Service  |  Google for Developers.” Google, Google, developers.google.com/youtube/terms/api-services-terms-of-service. Accessed 4 Dec. 2025. 
-    % this is a placeholder reference
+    \bibitem{ytAPI} “YouTube API Services Terms of Service  |  Google for Developers.” Google, Google, developers.google.com/youtube/terms/api-services-terms-of-service. Accessed 4 Dec. 2025. 
 \end{thebibliography}
 
 \end{document}
-
