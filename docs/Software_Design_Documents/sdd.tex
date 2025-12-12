@@ -1,4 +1,3 @@
-
 \documentclass[12pt]{article}
 
 % packages
@@ -9,9 +8,7 @@
 \usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{lipsum}
-\usepackage{geometry}
 \usepackage{caption}
-\usepackage{graphicx}
 \usepackage{enumitem}
 
 \pagestyle{fancy}
@@ -32,10 +29,8 @@
     {\huge Version 4.0 \par}
     \vspace{1cm}
     {\Large Group 6 \par}
-    {Momoka Aung \par}
-    {Alexander Jacobo \par}
-    {Tae Ha Kim \par}
-    {Kadence Tang \par}
+    \vspace{1cm}
+    {\large Momoka Aung \\ Alexander Jacobo \\ Tae Ha Kim \\ Kadence Tang \par}
 \end{titlepage}
 
 % table of contents
@@ -50,11 +45,11 @@
     \hline
     Group 6 & 1.0 & 4 Dec 2025 & Checkpoint 1: First draft of document. Basic information added for Lab Activity. \\
     \hline
-    Kadence Tang & 2.0.0 & 5 Dec 2025 & Checkpoint 2: Updated user interface information. \\
+    Kadence Tang & 2.0 & 5 Dec 2025 & Checkpoint 2: Updated user interface information. \\
     \hline
-    Kadence Tang & 3.0.0 & 7 Dec 2025 & Checkpoint 3: Cleaned up formatting. \\
+    Kadence Tang & 3.0 & 7 Dec 2025 & Checkpoint 3: Cleaned up formatting. \\
     \hline
-    Kadence Tang & 4.0.0 & 9 Dec 2025 & Final Draft. \\
+    Kadence Tang & 4.0 & 9 Dec 2025 & Final Draft. Made some corrections. \\
     \hline 
 \end{tabularx}
 \newpage
@@ -79,7 +74,7 @@
     The Influencer Analysis Tool is designed to provide insight into audience overlap between YouTube channels. It functions as a data-driven platform to support content creators in understanding their reach and shared audiences. The tool does the following:
     \begin{itemize}
         \item \textbf{Audience Overlap Analysis:} Enable creators to identify shared viewers between channels.
-        \item \textbf{ata Collection and Aggregation:} Collect and aggregate usernames to build a dataset for analysis.
+        \item \textbf{Data Collection and Aggregation:} Collect and aggregate usernames to build a dataset for analysis.
     \end{itemize}
     
     \subsection{System Functionality Breakdown}
@@ -109,7 +104,7 @@
         \item \textbf{Input Channel Module:} User inputs their own channel identifier and a target channel identifier.
         \item \textbf{Scraper Engine:} Collects usernames from the comment sections of videos from both channels.
         \item \textbf{Comparison Engine:} Compares collected usernames; counts how many usernames appear under both channels and calculates the percentage of overlap.
-        \item \textbf{Results Module:} Displays the number of overlapping viewers and the percentage of viewers that overlap between the two input channels.
+        \item \textbf{Results Module:} Displays the number of overlapping viewers and the percentage of overlapping viewers between the two input channels.
         \item \textbf{Database:} Stores channel identifiers, scraped usernames, recurring viewer records, and overlap statistics.
     \end{itemize}
 
@@ -140,8 +135,7 @@
 
 % references
 \begin{thebibliography}{9}
-    \bibitem{ytAPI} “YouTube API Services Terms of Service  |  Google for Developers.” Google, Google, developers.google.com/youtube/terms/api-services-terms-of-service. Accessed 4 Dec. 2025. 
-    % this is a placeholder reference.
+    \bibitem{ytAPI} “YouTube API Services Terms of Service  |  Google for Developers.” Google, Google, developers.google.com/youtube/terms/api-services-terms-of-service. Accessed 4 Dec. 2025. 
 \end{thebibliography}
 
 \end{document}
