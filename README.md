@@ -1,8 +1,10 @@
 # CS3338-final Group 6: Youtube Audience Analyzer
-Disclaimer: README is split into the .md file on the frontpage of the repo and a separate User Manual found within docs. Jira link, along with other sections, will be included in the User Manual.
+Disclaimer: We moved some parts of the User Manual (Jira Link / Obj. Breakdown / Significance & Goals) to this README. There is a separate User Manual with the rest of the sections found within docs folder.
 
 ## Jira Link
 [https://calstatela-team-y6yik1r0.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiZjg2MDkyZDYwZWY2NDk1MDgwYmIwZDBlMDI1NDYzMzgiLCJwIjoiaiJ9](https://calstatela-team-y6yik1r0.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiNDY3MjJhMDc4YWFlNGRiZmI1MzM4ZmJiZmQ1OWIwYTAiLCJwIjoiaiJ9&jql=)
+
+***Please try clicking on the link a second time if you can't see the Jira Space on the first try. For some reason, all our group members didn't have access on the first click but were able to view the space on the second try.
 
 ## Important Message for Professor
 Please use commit history to check our updates instead of the Snapshot Tags. We weren't very knowledgeable on how tagging worked and didn't realize it only points to a specific commit without the ability to push future commits to organize commits from different times and different members into individual Snapshots.
